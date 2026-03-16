@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Legenda Banyuwangi</title>
+
+<link rel="stylesheet" href="../style.css">
+
+</head>
+
+<body>
+
+<header>
+<h1>SAKTI BACA</h1>
+</header>
+
+
+<div class="story-container">
+
+<h2>Legenda Banyuwangi</h2>
+
+<div class="badge">📍 Banyuwangi, Jawa Timur</div>
+
+<img src="../images/banyuwangi.jpg" class="story-image">
+
+
+<p>
+Pada zaman dahulu hiduplah seorang gadis cantik dan
+baik hati bernama
+<span class="kata" onclick="kamus('sritanjung')">Sri Tanjung</span>.
+Ia adalah istri dari seorang panglima kerajaan yang
+bernama
+<span class="kata" onclick="kamus('sidapaksa')">Sidopekso</span>.
+Mereka hidup dengan damai dan saling menyayangi.
+</p>
+
+<p>
+Suatu hari Sidopekso mendapat tugas dari raja untuk
+pergi menjalankan misi penting ke luar daerah.
+Sebelum berangkat, ia menitipkan Sri Tanjung kepada
+atasannya yang bernama
+<span class="kata" onclick="kamus('patih')">Patih</span>.
+Namun patih tersebut memiliki niat buruk dan
+berusaha merebut Sri Tanjung.
+</p>
+
+<p>
+Sri Tanjung menolak dengan tegas karena ia sangat
+setia kepada suaminya. Patih itu kemudian marah
+dan menuduh Sri Tanjung telah berbuat hal yang tidak
+baik kepada suaminya.
+</p>
+
+<p>
+Ketika Sidopekso pulang, ia mendengar fitnah tersebut.
+Karena dipenuhi rasa marah dan cemburu, ia tidak
+mendengarkan penjelasan istrinya.
+Dalam kemarahannya, ia membawa Sri Tanjung ke
+tepi sungai untuk menghukumnya.
+</p>
+
+<p>
+Sebelum dilempar ke sungai, Sri Tanjung berkata bahwa
+jika dirinya benar-benar setia dan tidak bersalah,
+maka air sungai akan menjadi harum.
+</p>
+
+<p>
+Setelah tubuhnya jatuh ke sungai, tiba-tiba air sungai
+mengeluarkan aroma yang sangat wangi.
+Barulah Sidopekso menyadari bahwa istrinya tidak
+bersalah. Ia pun menyesal atas perbuatannya.
+</p>
+
+<p>
+Sejak saat itu tempat tersebut dikenal dengan nama
+<span class="kata" onclick="kamus('banyuwangi')">Banyuwangi</span>,
+yang berarti air yang harum.
+Nama ini kemudian menjadi nama daerah di ujung
+timur Pulau Jawa.
+</p>
+
+
+<div class="moral">
+
+<h3>🌟 Pesan Moral Cerita</h3>
+
+<ul>
+<li>Jangan mudah percaya pada fitnah atau kabar yang belum tentu benar.</li>
+<li>Kesetiaan dan kejujuran akan selalu menemukan kebenarannya.</li>
+<li>Menyesal setelah melakukan kesalahan sering kali sudah terlambat.</li>
+
+</ul>
+
+</div>
+
+
+<a href="../index.html" class="back-link">← Kembali ke Beranda</a>
+
+</div>
+
+
+
+<div class="overlay" id="overlay"></div>
+
+<div class="popup" id="popup">
+<p id="arti"></p>
+<button onclick="tutup()">Tutup</button>
+</div>
+
+
+
+<script>
+
+function kamus(kata){
+
+let arti="";
+
+if(kata=="sritanjung"){
+arti="Sri Tanjung adalah tokoh utama dalam legenda Banyuwangi yang terkenal karena kesetiaan dan kebaikan hatinya.";
+}
+
+if(kata=="sidapaksa"){
+arti="Sidopekso adalah suami Sri Tanjung yang bekerja sebagai panglima kerajaan.";
+}
+
+if(kata=="patih"){
+arti="Patih adalah pejabat tinggi dalam kerajaan yang membantu raja menjalankan pemerintahan.";
+}
+
+if(kata=="banyuwangi"){
+arti="Banyuwangi berasal dari kata 'banyu' yang berarti air dan 'wangi' yang berarti harum.";
+}
+
+document.getElementById("arti").innerText = arti;
+
+document.getElementById("popup").style.display="block";
+document.getElementById("overlay").style.display="block";
+
+}
+
+function tutup(){
+document.getElementById("popup").style.display="none";
+document.getElementById("overlay").style.display="none";
+}
+
+</script>
+
+
+</body>
+</html>

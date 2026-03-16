@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Legenda Keong Mas</title>
+
+<link rel="stylesheet" href="../style.css">
+
+</head>
+
+<body>
+
+<header>
+<h1>SAKTI BACA</h1>
+</header>
+
+
+<div class="story-container">
+
+<h2>Legenda Keong Mas</h2>
+
+<div class="badge">📍 Jawa Timur</div>
+
+<img src="../images/keongmas.jpg" class="story-image">
+
+
+<p>
+Pada zaman dahulu hiduplah dua orang putri dari
+sebuah kerajaan besar, yaitu
+<span class="kata" onclick="kamus('candra')">Dewi Candra Kirana</span>
+dan
+<span class="kata" onclick="kamus('galuh')">Dewi Galuh</span>.
+Dewi Candra Kirana dikenal sebagai putri yang
+cantik, baik hati, dan disukai oleh banyak orang.
+</p>
+
+<p>
+Suatu hari seorang pangeran bernama
+<span class="kata" onclick="kamus('panji')">Raden Panji Asmoro Bangun</span>
+datang untuk melamar Dewi Candra Kirana.
+Namun Dewi Galuh merasa iri dan tidak senang
+melihat kebahagiaan saudaranya.
+</p>
+
+<p>
+Karena rasa iri tersebut, Dewi Galuh meminta
+bantuan seorang penyihir untuk mengutuk Dewi
+Candra Kirana. Akibat kutukan itu, sang putri
+berubah menjadi seekor
+<span class="kata" onclick="kamus('keong')">keong emas</span>
+dan dibuang ke sungai.
+</p>
+
+<p>
+Keong emas tersebut kemudian ditemukan oleh
+seorang nenek yang tinggal di desa. Nenek itu
+membawanya pulang dan merawatnya dengan baik.
+Anehnya, setiap hari rumah nenek itu selalu
+menjadi rapi dan tersedia makanan lezat.
+</p>
+
+<p>
+Suatu hari nenek itu mengintip dan melihat
+bahwa keong emas tersebut berubah menjadi
+seorang putri cantik, yaitu Dewi Candra Kirana.
+Nenek itu akhirnya mengetahui rahasia tersebut
+dan berjanji akan menjaga sang putri.
+</p>
+
+<p>
+Sementara itu Raden Panji terus mencari
+kekasihnya yang hilang. Setelah perjalanan
+yang panjang, ia akhirnya menemukan Dewi
+Candra Kirana dan kutukan tersebut pun
+berakhir.
+</p>
+
+<p>
+Akhirnya mereka kembali ke kerajaan dan
+hidup bahagia bersama.
+</p>
+
+
+
+<div class="moral">
+
+<h3>🌟 Pesan Moral Cerita</h3>
+
+<ul>
+<li>Rasa iri dan dengki dapat membawa penderitaan bagi orang lain.</li>
+<li>Kebaikan hati akan selalu mendapatkan balasan yang baik.</li>
+<li>Kesetiaan dan ketulusan akan membawa kebahagiaan pada akhirnya.</li>
+
+</ul>
+
+</div>
+
+
+<a href="../index.html" class="back-link">← Kembali ke Beranda</a>
+
+</div>
+
+
+
+<div class="overlay" id="overlay"></div>
+
+<div class="popup" id="popup">
+<p id="arti"></p>
+<button onclick="tutup()">Tutup</button>
+</div>
+
+
+
+<script>
+
+function kamus(kata){
+
+let arti="";
+
+if(kata=="candra"){
+arti="Dewi Candra Kirana adalah tokoh utama dalam cerita Keong Mas yang dikenal karena kecantikan dan kebaikan hatinya.";
+}
+
+if(kata=="galuh"){
+arti="Dewi Galuh adalah saudara Dewi Candra Kirana yang iri dan menyebabkan kutukan pada sang putri.";
+}
+
+if(kata=="panji"){
+arti="Raden Panji Asmoro Bangun adalah pangeran yang mencintai Dewi Candra Kirana.";
+}
+
+if(kata=="keong"){
+arti="Keong emas adalah bentuk kutukan yang diberikan kepada Dewi Candra Kirana dalam cerita rakyat ini.";
+}
+
+document.getElementById("arti").innerText = arti;
+
+document.getElementById("popup").style.display="block";
+document.getElementById("overlay").style.display="block";
+
+}
+
+function tutup(){
+document.getElementById("popup").style.display="none";
+document.getElementById("overlay").style.display="none";
+}
+
+</script>
+
+
+</body>
+</html>

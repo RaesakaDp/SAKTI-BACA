@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Cerita Panji Asmoro Bangun</title>
+
+<link rel="stylesheet" href="../style.css">
+
+</head>
+
+<body>
+
+<header>
+<h1>SAKTI BACA</h1>
+</header>
+
+
+<div class="story-container">
+
+<h2>Cerita Panji Asmoro Bangun</h2>
+
+<div class="badge">📍 Kediri, Jawa Timur</div>
+
+<img src="../images/panji.jpg" class="story-image">
+
+
+<p>
+Pada zaman dahulu hiduplah seorang pangeran
+bijaksana bernama
+<span class="kata" onclick="kamus('panji')">Raden Panji Asmoro Bangun</span>.
+Ia adalah putra mahkota dari Kerajaan Kediri
+yang dikenal karena keberanian dan kebaikan hatinya.
+</p>
+
+<p>
+Panji Asmoro Bangun memiliki kekasih bernama
+<span class="kata" onclick="kamus('candra')">Dewi Candra Kirana</span>.
+Mereka berdua saling mencintai dan berencana
+untuk menikah.
+</p>
+
+<p>
+Namun suatu hari Dewi Candra Kirana menghilang
+secara misterius. Panji Asmoro Bangun sangat
+sedih dan memutuskan untuk mencari kekasihnya
+ke berbagai daerah.
+</p>
+
+<p>
+Dalam perjalanannya Panji menyamar sebagai
+rakyat biasa agar dapat lebih mudah mencari
+informasi. Ia melewati banyak desa dan kerajaan
+sambil menolong orang-orang yang membutuhkan
+bantuan.
+</p>
+
+<p>
+Setelah perjalanan yang panjang, akhirnya Panji
+berhasil menemukan Dewi Candra Kirana dan
+membebaskannya dari berbagai kesulitan yang
+menimpanya.
+</p>
+
+<p>
+Mereka akhirnya kembali ke kerajaan dan hidup
+bahagia bersama.
+</p>
+
+
+<div class="moral">
+
+<h3>🌟 Pesan Moral Cerita</h3>
+
+<ul>
+<li>Kesetiaan dan cinta sejati membutuhkan perjuangan.</li>
+<li>Keberanian dan kebaikan hati akan membawa keberhasilan.</li>
+<li>Menolong orang lain adalah perbuatan yang mulia.</li>
+
+</ul>
+
+</div>
+
+
+<a href="../index.html" class="back-link">← Kembali ke Beranda</a>
+
+</div>
+
+
+
+<div class="overlay" id="overlay"></div>
+
+<div class="popup" id="popup">
+<p id="arti"></p>
+<button onclick="tutup()">Tutup</button>
+</div>
+
+
+
+<script>
+
+function kamus(kata){
+
+let arti="";
+
+if(kata=="panji"){
+arti="Raden Panji Asmoro Bangun adalah pangeran dari Kerajaan Kediri yang terkenal dalam berbagai cerita rakyat Jawa Timur.";
+}
+
+if(kata=="candra"){
+arti="Dewi Candra Kirana adalah putri yang menjadi pasangan Panji Asmoro Bangun.";
+}
+
+document.getElementById("arti").innerText = arti;
+
+document.getElementById("popup").style.display="block";
+document.getElementById("overlay").style.display="block";
+
+}
+
+function tutup(){
+document.getElementById("popup").style.display="none";
+document.getElementById("overlay").style.display="none";
+}
+
+</script>
+
+
+</body>
+</html>

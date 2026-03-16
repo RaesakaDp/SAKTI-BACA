@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Legenda Gunung Kelud</title>
+
+<link rel="stylesheet" href="../style.css">
+
+</head>
+
+<body>
+
+<header>
+<h1>SAKTI BACA</h1>
+</header>
+
+
+<div class="story-container">
+
+<h2>Legenda Gunung Kelud</h2>
+
+<div class="badge">📍 Kediri, Jawa Timur</div>
+
+<img src="../images/kelud.jpg" class="story-image">
+
+
+<p>
+Pada zaman dahulu di wilayah Kediri hiduplah seorang putri
+yang sangat cantik bernama
+<span class="kata" onclick="kamus('kilisuci')">Dewi Kilisuci</span>.
+Kecantikannya terkenal hingga ke berbagai kerajaan.
+Banyak pangeran datang untuk melamarnya, tetapi Dewi
+Kilisuci belum ingin menikah.
+</p>
+
+<p>
+Suatu hari datanglah seorang raja sakti bernama
+<span class="kata" onclick="kamus('lembusuro')">Lembu Suro</span>.
+Ia memiliki wujud manusia dengan kepala kerbau dan
+kekuatan yang sangat besar.
+Lembu Suro jatuh cinta kepada Dewi Kilisuci dan
+memaksa sang putri untuk menjadi istrinya.
+</p>
+
+<p>
+Dewi Kilisuci merasa takut, tetapi ia juga sangat
+cerdas. Ia tidak langsung menolak lamaran tersebut.
+Sebagai gantinya, ia memberikan syarat yang sangat
+sulit kepada Lembu Suro.
+</p>
+
+<p>
+Sang putri meminta Lembu Suro membuat dua buah
+<span class="kata" onclick="kamus('sumur')">sumur</span>
+yang sangat dalam di puncak gunung hanya dalam
+satu malam. Dengan kekuatan dan kesaktiannya,
+Lembu Suro hampir berhasil menyelesaikan tugas itu.
+</p>
+
+<p>
+Namun Dewi Kilisuci dan para pengawal kerajaan
+menipu Lembu Suro dengan membuat seolah-olah
+hari sudah pagi. Mereka menumbuk padi dan
+menyalakan api agar langit terlihat terang.
+</p>
+
+<p>
+Merasa tertipu, Lembu Suro menjadi sangat marah.
+Ia mengutuk wilayah tersebut dan berkata bahwa
+daerah itu suatu hari akan hancur karena letusan
+gunung yang besar.
+</p>
+
+<p>
+Sejak saat itu gunung tempat kejadian tersebut
+dikenal sebagai
+<span class="kata" onclick="kamus('kelud')">Gunung Kelud</span>,
+yang hingga kini masih menjadi salah satu gunung
+berapi aktif di Jawa Timur.
+</p>
+
+
+
+<div class="moral">
+
+<h3>🌟 Pesan Moral Cerita</h3>
+
+<ul>
+<li>Kecerdasan dapat membantu seseorang menghadapi masalah yang sulit.</li>
+<li>Memaksakan kehendak kepada orang lain dapat membawa akibat buruk.</li>
+<li>Setiap tindakan yang dilakukan dengan kemarahan dapat merugikan banyak pihak.</li>
+
+</ul>
+
+</div>
+
+
+<a href="../index.html" class="back-link">← Kembali ke Beranda</a>
+
+</div>
+
+
+
+<div class="overlay" id="overlay"></div>
+
+<div class="popup" id="popup">
+<p id="arti"></p>
+<button onclick="tutup()">Tutup</button>
+</div>
+
+
+
+<script>
+
+function kamus(kata){
+
+let arti="";
+
+if(kata=="kilisuci"){
+arti="Dewi Kilisuci adalah putri cantik dari Kediri yang menjadi tokoh utama dalam legenda Gunung Kelud.";
+}
+
+if(kata=="lembusuro"){
+arti="Lembu Suro adalah tokoh sakti dalam legenda Gunung Kelud yang memiliki wujud manusia berkepala kerbau.";
+}
+
+if(kata=="sumur"){
+arti="Sumur adalah lubang dalam di tanah yang biasanya digunakan untuk mengambil air.";
+}
+
+if(kata=="kelud"){
+arti="Gunung Kelud adalah gunung berapi yang berada di wilayah Kediri, Jawa Timur.";
+}
+
+document.getElementById("arti").innerText = arti;
+
+document.getElementById("popup").style.display="block";
+document.getElementById("overlay").style.display="block";
+
+}
+
+function tutup(){
+document.getElementById("popup").style.display="none";
+document.getElementById("overlay").style.display="none";
+}
+
+</script>
+
+
+</body>
+</html>

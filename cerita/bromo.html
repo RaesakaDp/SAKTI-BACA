@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Asal Usul Gunung Bromo</title>
+
+<link rel="stylesheet" href="../style.css">
+
+</head>
+
+<body>
+
+<header>
+<h1>SAKTI BACA</h1>
+</header>
+
+
+<div class="story-container">
+
+<h2>Asal Usul Gunung Bromo</h2>
+
+<div class="badge">📍 Probolinggo & Malang, Jawa Timur</div>
+
+<img src="../images/bromo.jpg" class="story-image">
+
+
+<p>
+Pada zaman dahulu hiduplah sepasang suami istri
+bernama
+<span class="kata" onclick="kamus('roro')">Roro Anteng</span>
+dan
+<span class="kata" onclick="kamus('joko')">Joko Seger</span>.
+Mereka memimpin masyarakat yang tinggal di daerah
+pegunungan Tengger dengan bijaksana dan adil.
+</p>
+
+<p>
+Meskipun hidup makmur dan dihormati oleh rakyat,
+mereka memiliki satu kesedihan besar, yaitu
+tidak memiliki anak. Setiap hari mereka berdoa
+kepada para dewa agar diberikan keturunan.
+</p>
+
+<p>
+Suatu hari doa mereka dikabulkan oleh dewa yang
+berkuasa di gunung
+<span class="kata" onclick="kamus('bromo')">Bromo</span>.
+Namun ada satu syarat yang harus mereka penuhi.
+Jika mereka memiliki banyak anak, maka anak
+bungsu mereka harus dikorbankan ke kawah gunung.
+</p>
+
+<p>
+Roro Anteng dan Joko Seger akhirnya memiliki
+dua puluh lima orang anak. Mereka hidup bahagia,
+tetapi lama-kelamaan mereka merasa tidak tega
+untuk memenuhi janji tersebut.
+</p>
+
+<p>
+Ketika janji itu tidak ditepati, gunung Bromo
+menjadi sangat marah. Gunung tersebut meletus
+dan mengeluarkan suara gemuruh yang menakutkan.
+Anak bungsu mereka yang bernama
+<span class="kata" onclick="kamus('kusuma')">Raden Kusuma</span>
+akhirnya jatuh ke kawah gunung.
+</p>
+
+<p>
+Sebelum menghilang, Raden Kusuma berpesan agar
+masyarakat Tengger setiap tahun memberikan
+persembahan ke kawah gunung sebagai tanda
+syukur kepada para dewa.
+</p>
+
+<p>
+Sejak saat itu masyarakat Tengger melakukan
+upacara
+<span class="kata" onclick="kamus('yadnya')">Yadnya Kasada</span>
+di Gunung Bromo sebagai bentuk penghormatan
+dan rasa syukur.
+</p>
+
+
+
+<div class="moral">
+
+<h3>🌟 Pesan Moral Cerita</h3>
+
+<ul>
+<li>Kita harus menepati janji yang telah dibuat.</li>
+<li>Rasa syukur kepada Tuhan harus selalu dijaga.</li>
+<li>Tradisi budaya merupakan warisan yang perlu dilestarikan.</li>
+
+</ul>
+
+</div>
+
+
+<a href="../index.html" class="back-link">← Kembali ke Beranda</a>
+
+</div>
+
+
+
+<div class="overlay" id="overlay"></div>
+
+<div class="popup" id="popup">
+<p id="arti"></p>
+<button onclick="tutup()">Tutup</button>
+</div>
+
+
+
+<script>
+
+function kamus(kata){
+
+let arti="";
+
+if(kata=="roro"){
+arti="Roro Anteng adalah tokoh dalam legenda Gunung Bromo yang menjadi pemimpin masyarakat Tengger.";
+}
+
+if(kata=="joko"){
+arti="Joko Seger adalah suami Roro Anteng dan pemimpin masyarakat di wilayah Tengger.";
+}
+
+if(kata=="bromo"){
+arti="Gunung Bromo adalah gunung berapi yang berada di kawasan Taman Nasional Bromo Tengger Semeru.";
+}
+
+if(kata=="kusuma"){
+arti="Raden Kusuma adalah anak bungsu Roro Anteng dan Joko Seger dalam legenda Gunung Bromo.";
+}
+
+if(kata=="yadnya"){
+arti="Yadnya Kasada adalah upacara adat masyarakat Tengger yang dilakukan setiap tahun di Gunung Bromo.";
+}
+
+document.getElementById("arti").innerText = arti;
+
+document.getElementById("popup").style.display="block";
+document.getElementById("overlay").style.display="block";
+
+}
+
+function tutup(){
+document.getElementById("popup").style.display="none";
+document.getElementById("overlay").style.display="none";
+}
+
+</script>
+
+
+</body>
+</html>

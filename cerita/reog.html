@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+
+<meta charset="UTF-8">
+<title>Asal Usul Reog Ponorogo</title>
+
+<link rel="stylesheet" href="../style.css">
+
+<style>
+
+.kata{
+color:#0f6cd6;
+cursor:pointer;
+font-weight:bold;
+}
+
+.popup{
+display:none;
+position:fixed;
+top:50%;
+left:50%;
+transform:translate(-50%,-50%);
+background:white;
+padding:25px;
+border-radius:10px;
+box-shadow:0 10px 30px rgba(0,0,0,0.2);
+max-width:300px;
+z-index:1000;
+}
+
+.popup button{
+margin-top:10px;
+}
+
+.overlay{
+display:none;
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.5);
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+<h1>SAKTI BACA</h1>
+</header>
+
+<div class="story-container">
+
+<h2>Asal Usul Reog Ponorogo</h2>
+
+<div class="badge">📍 Ponorogo, Jawa Timur</div>
+
+<img src="../images/reog.png" class="story-image">
+
+<p>
+Pada zaman dahulu hiduplah Ki Ageng Kutu di Ponorogo.
+Ia merasa kecewa terhadap pemerintahan kerajaan
+<span class="kata" onclick="kamus('majapahit')">Majapahit</span>.
+Sebagai bentuk kritik, ia menciptakan pertunjukan
+<span class="kata" onclick="kamus('reog')">Reog</span>.
+</p>
+
+<p>
+Pertunjukan ini menampilkan topeng singa besar yang
+disebut Singa Barong. Hingga sekarang Reog Ponorogo
+menjadi salah satu kesenian terkenal dari Jawa Timur.
+</p>
+
+<a href="../index.html" class="back-link">← Kembali ke Beranda</a>
+
+<div class="moral">
+
+<h3>🌟 Pesan Moral Cerita</h3>
+
+<ul>
+<li>Kesenian dapat menjadi cara untuk menyampaikan kritik sosial.</li>
+<li>Budaya daerah harus dilestarikan oleh generasi muda.</li>
+<li>Nilai keberanian dan kreativitas dapat menghasilkan karya budaya yang besar.</li>
+
+</ul>
+
+</div>
+
+<div class="game">
+
+<h3>🎮 Game: Tebak Tokoh</h3>
+<p>Siapakah tokoh yang menciptakan kesenian Reog?</p>
+
+<button onclick="cekGame('benar')">Ki Ageng Kutu</button>
+<button onclick="cekGame('salah')">Raden Panji</button>
+
+<p id="gameHasil"></p>
+
+</div>
+
+<!-- BAGIAN KUIS -->
+<div class="quiz">
+<h3>🧠 Kuis Cerita</h3>
+<form id="quizForm">
+
+<div class="quiz-question">
+<p>1. Siapakah tokoh yang menciptakan kesenian Reog?</p>
+<label><input type="radio" name="q1" value="0"> Prabu Klono Sewandono</label>
+<label><input type="radio" name="q1" value="1"> Ki Ageng Kutu</label>
+<label><input type="radio" name="q1" value="0"> Raden Panji</label>
+</div>
+
+<div class="quiz-question">
+<p>2. Reog berasal dari daerah?</p>
+<label><input type="radio" name="q2" value="1"> Ponorogo</label>
+<label><input type="radio" name="q2" value="0"> Surabaya</label>
+<label><input type="radio" name="q2" value="0"> Banyuwangi</label>
+</div>
+
+<div class="quiz-question">
+<p>3. Topeng besar dalam Reog disebut?</p>
+<label><input type="radio" name="q3" value="1"> Singa Barong</label>
+<label><input type="radio" name="q3" value="0"> Topeng Garuda</label>
+<label><input type="radio" name="q3" value="0"> Barong Bali</label>
+</div>
+
+<button type="button" onclick="cekQuiz()">Lihat Skor</button>
+</form>
+<p id="hasilQuiz"></p>
+</div>
+
+</div>
+
+</div>
+
+
+<div class="overlay" id="overlay"></div>
+
+<div class="popup" id="popup">
+<p id="arti"></p>
+<button onclick="tutup()">Tutup</button>
+</div>
+
+
+<script>
+
+function kamus(kata){
+
+let arti="";
+
+if(kata=="majapahit"){
+arti="Majapahit adalah kerajaan besar di Nusantara yang berdiri sekitar abad ke-13.";
+}
+
+if(kata=="reog"){
+arti="Reog adalah kesenian tradisional dari Ponorogo yang menampilkan topeng singa besar.";
+}
+
+document.getElementById("arti").innerText=arti;
+
+document.getElementById("popup").style.display="block";
+document.getElementById("overlay").style.display="block";
+
+}
+
+function tutup(){
+document.getElementById("popup").style.display="none";
+document.getElementById("overlay").style.display="none";
+}
+
+function cekGame(jawaban){
+
+const hasil = document.getElementById("gameHasil");
+
+if(jawaban === "benar"){
+hasil.innerHTML = "🎉 Benar!";
+hasil.style.color = "green";
+}else{
+hasil.innerHTML = "❌ Coba lagi!";
+hasil.style.color = "red";
+}
+
+}
+
+<!-- JS KUIS DITARUH DI SINI -->
+
+function cekQuiz(){
+  let score = 0;
+  let q1 = document.querySelector('input[name="q1"]:checked');
+  let q2 = document.querySelector('input[name="q2"]:checked');
+  let q3 = document.querySelector('input[name="q3"]:checked');
+
+  if(!q1 || !q2 || !q3){
+    document.getElementById("hasilQuiz").innerHTML =
+    "⚠️ Silakan jawab semua pertanyaan terlebih dahulu.";
+    return;
+  }
+
+  score += parseInt(q1.value);
+  score += parseInt(q2.value);
+  score += parseInt(q3.value);
+
+  let hasil = document.getElementById("hasilQuiz");
+
+  if(score == 3){
+    hasil.innerHTML = "🏆 Skor kamu: 3/3<br>Hebat! Kamu memahami cerita dengan sangat baik.";
+  }
+  else if(score == 2){
+    hasil.innerHTML = "👍 Skor kamu: 2/3<br>Bagus! Kamu hampir benar semua.";
+  }
+  else if(score == 1){
+    hasil.innerHTML = "🙂 Skor kamu: 1/3<br>Coba baca lagi ceritanya.";
+  }
+  else{
+    hasil.innerHTML = "📖 Skor kamu: 0/3<br>Yuk baca ceritanya lagi.";
+  }
+}
+
+</script>
+
+</body>
+</html>

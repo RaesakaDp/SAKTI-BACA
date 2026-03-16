@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Legenda Sura dan Baya</title>
+
+<link rel="stylesheet" href="../style.css">
+
+</head>
+
+<body>
+
+<header>
+<h1>SAKTI BACA</h1>
+</header>
+
+
+<div class="story-container">
+
+<h2>Legenda Sura dan Baya</h2>
+
+<div class="badge">📍 Surabaya, Jawa Timur</div>
+
+<img src="../images/surabaya.jpg" class="story-image">
+
+
+<p>
+Pada zaman dahulu di laut Jawa hiduplah dua makhluk
+yang sangat kuat, yaitu
+<span class="kata" onclick="kamus('sura')">Sura</span>
+dan
+<span class="kata" onclick="kamus('baya')">Baya</span>.
+Sura adalah seekor hiu yang terkenal ganas,
+sedangkan Baya adalah seekor buaya yang sangat kuat.
+</p>
+
+<p>
+Awalnya mereka hidup dengan damai karena membagi
+wilayah kekuasaan. Sura menguasai lautan, sedangkan
+Baya menguasai sungai dan daratan di sekitarnya.
+Namun suatu hari mereka bertemu saat berburu mangsa.
+</p>
+
+<p>
+Karena keduanya sama-sama lapar dan ingin
+mendapatkan makanan, terjadilah pertengkaran
+yang hebat. Mereka saling menunjukkan kekuatan
+masing-masing.
+</p>
+
+<p>
+Pertarungan antara Sura dan Baya berlangsung
+sangat lama dan sengit. Air laut menjadi keruh
+karena perkelahian mereka.
+</p>
+
+<p>
+Akhirnya mereka menyadari bahwa pertarungan
+tersebut tidak akan menghasilkan pemenang.
+Mereka kemudian sepakat untuk kembali membagi
+wilayah kekuasaan masing-masing.
+</p>
+
+<p>
+Tempat terjadinya perkelahian itu kemudian
+dikenal dengan nama
+<span class="kata" onclick="kamus('surabaya')">Surabaya</span>,
+yang berasal dari kata
+<span class="kata" onclick="kamus('sura')">Sura</span>
+dan
+<span class="kata" onclick="kamus('baya')">Baya</span>.
+Nama ini kemudian menjadi nama kota besar di
+Jawa Timur yang kita kenal hingga sekarang.
+</p>
+
+
+
+<div class="moral">
+
+<h3>🌟 Pesan Moral Cerita</h3>
+
+<ul>
+<li>Pertengkaran hanya akan merugikan kedua pihak.</li>
+<li>Setiap masalah sebaiknya diselesaikan dengan kesepakatan.</li>
+<li>Kita harus menghargai wilayah dan hak orang lain.</li>
+
+</ul>
+
+</div>
+
+
+<a href="../index.html" class="back-link">← Kembali ke Beranda</a>
+
+</div>
+
+
+
+<div class="overlay" id="overlay"></div>
+
+<div class="popup" id="popup">
+<p id="arti"></p>
+<button onclick="tutup()">Tutup</button>
+</div>
+
+
+
+<script>
+
+function kamus(kata){
+
+let arti="";
+
+if(kata=="sura"){
+arti="Sura adalah seekor hiu dalam legenda yang menjadi salah satu asal usul nama Surabaya.";
+}
+
+if(kata=="baya"){
+arti="Baya adalah seekor buaya dalam legenda yang bertarung dengan Sura.";
+}
+
+if(kata=="surabaya"){
+arti="Surabaya adalah kota besar di Jawa Timur yang namanya berasal dari legenda pertarungan Sura dan Baya.";
+}
+
+document.getElementById("arti").innerText = arti;
+
+document.getElementById("popup").style.display="block";
+document.getElementById("overlay").style.display="block";
+
+}
+
+function tutup(){
+document.getElementById("popup").style.display="none";
+document.getElementById("overlay").style.display="none";
+}
+
+</script>
+
+
+</body>
+</html>

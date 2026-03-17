@@ -28,49 +28,49 @@
 
 
 <p>
-Pada zaman dahulu di wilayah Kediri hiduplah seorang putri
+Pada zaman dahulu di wilayah Kediri hiduplah seorang <span class="kata" onclick="kamus('putri')">putri</span>
 yang sangat cantik bernama
 <span class="kata" onclick="kamus('kilisuci')">Dewi Kilisuci</span>.
 Kecantikannya terkenal hingga ke berbagai kerajaan.
-Banyak pangeran datang untuk melamarnya, tetapi Dewi
+Banyak <span class="kata" onclick="kamus('pangeran')">pangeran</span> datang untuk <span class="kata" onclick="kamus('melamar')">melamar</span>nya, tetapi Dewi
 Kilisuci belum ingin menikah.
 </p>
 
 <p>
-Suatu hari datanglah seorang raja sakti bernama
+Suatu hari datanglah seorang raja <span class="kata" onclick="kamus('sakti')">sakti</span> bernama
 <span class="kata" onclick="kamus('lembusuro')">Lembu Suro</span>.
-Ia memiliki wujud manusia dengan kepala kerbau dan
+Ia memiliki <span class="kata" onclick="kamus('wujud')">wujud</span> manusia dengan kepala kerbau dan
 kekuatan yang sangat besar.
 Lembu Suro jatuh cinta kepada Dewi Kilisuci dan
-memaksa sang putri untuk menjadi istrinya.
+<span class="kata" onclick="kamus('memaksa')">memaksa</span> sang <span class="kata" onclick="kamus('putri')">putri</span> untuk menjadi istrinya.
 </p>
 
 <p>
 Dewi Kilisuci merasa takut, tetapi ia juga sangat
-cerdas. Ia tidak langsung menolak lamaran tersebut.
-Sebagai gantinya, ia memberikan syarat yang sangat
+<span class="kata" onclick="kamus('cerdas')">cerdas</span>. Ia tidak langsung menolak lamaran tersebut.
+Sebagai gantinya, ia memberikan <span class="kata" onclick="kamus('syarat')">syarat</span> yang sangat
 sulit kepada Lembu Suro.
 </p>
 
 <p>
-Sang putri meminta Lembu Suro membuat dua buah
+Sang <span class="kata" onclick="kamus('putri')">putri</span> meminta Lembu Suro membuat dua buah
 <span class="kata" onclick="kamus('sumur')">sumur</span>
-yang sangat dalam di puncak gunung hanya dalam
+yang sangat dalam di <span class="kata" onclick="kamus('puncak')">puncak</span> gunung hanya dalam
 satu malam. Dengan kekuatan dan kesaktiannya,
 Lembu Suro hampir berhasil menyelesaikan tugas itu.
 </p>
 
 <p>
-Namun Dewi Kilisuci dan para pengawal kerajaan
-menipu Lembu Suro dengan membuat seolah-olah
+Namun Dewi Kilisuci dan para <span class="kata" onclick="kamus('pengawal')">pengawal</span> kerajaan
+<span class="kata" onclick="kamus('menipu')">menipu</span> Lembu Suro dengan membuat seolah-olah
 hari sudah pagi. Mereka menumbuk padi dan
 menyalakan api agar langit terlihat terang.
 </p>
 
 <p>
-Merasa tertipu, Lembu Suro menjadi sangat marah.
-Ia mengutuk wilayah tersebut dan berkata bahwa
-daerah itu suatu hari akan hancur karena letusan
+Merasa <span class="kata" onclick="kamus('tertipu')">tertipu</span>, Lembu Suro menjadi sangat marah.
+Ia <span class="kata" onclick="kamus('mengutuk')">mengutuk</span> wilayah tersebut dan berkata bahwa
+daerah itu suatu hari akan hancur karena <span class="kata" onclick="kamus('letusan')">letusan</span>
 gunung yang besar.
 </p>
 
@@ -95,6 +95,45 @@ berapi aktif di Jawa Timur.
 
 </ul>
 
+</div>
+
+<div class="game">
+<h3>🎮 Game: Tebak Tokoh</h3>
+<p>Siapakah tokoh dalam legenda Gunung Kelud?</p>
+<button onclick="cekGame('benar')">Lembu Suro</button>
+<button onclick="cekGame('salah')">Ki Ageng Kutu</button>
+<p id="gameHasil"></p>
+</div>
+
+<div class="quiz">
+<h3>🧠 Kuis Cerita</h3>
+<form id="quizForm">
+
+<div class="quiz-question">
+<p>1. Siapakah tokoh utama dalam legenda Gunung Kelud?</p>
+<label><input type="radio" name="q1" value="1"> Dewi Kilisuci</label>
+<label><input type="radio" name="q1" value="0"> Sri Tanjung</label>
+<label><input type="radio" name="q1" value="0"> Roro Jonggrang</label>
+</div>
+
+<div class="quiz-question">
+<p>2. Apa yang diinginkan pria sakti kepada sang putri?</p>
+<label><input type="radio" name="q2" value="1"> Menikahinya</label>
+<label><input type="radio" name="q2" value="0"> Mengalahkannya</label>
+<label><input type="radio" name="q2" value="0"> Mengusirnya</label>
+
+</div>
+
+<div class="quiz-question">
+<p>3. Apa syarat yang diberikan Dewi Kilisuci?</p>
+<label><input type="radio" name="q3" value="1"> Membuat sumur di puncak gunung</label>
+<label><input type="radio" name="q3" value="0"> Membangun candi</label>
+<label><input type="radio" name="q3" value="0"> Menemukan harta karun</label>
+</div>
+
+<button type="button" onclick="cekQuiz()">Lihat Skor</button>
+</form>
+<p id="hasilQuiz"></p>
 </div>
 
 
@@ -135,6 +174,22 @@ if(kata=="kelud"){
 arti="Gunung Kelud adalah gunung berapi yang berada di wilayah Kediri, Jawa Timur.";
 }
 
+
+if(kata=="putri"){ arti="Anak perempuan dari raja atau keluarga kerajaan."; }
+if(kata=="pangeran"){ arti="Anak laki-laki dari raja."; }
+if(kata=="melamar"){ arti="Meminta seseorang untuk dijadikan istri."; }
+if(kata=="sakti"){ arti="Memiliki kekuatan luar biasa atau ajaib."; }
+if(kata=="wujud"){ arti="Bentuk atau rupa sesuatu."; }
+if(kata=="memaksa"){ arti="Menyuruh orang melakukan sesuatu walaupun tidak mau."; }
+if(kata=="cerdas"){ arti="Pintar dalam berpikir dan mencari cara."; }
+if(kata=="syarat"){ arti="Ketentuan yang harus dipenuhi terlebih dahulu."; }
+if(kata=="puncak"){ arti="Bagian paling atas dari gunung atau tempat tinggi."; }
+if(kata=="pengawal"){ arti="Orang yang bertugas menjaga dan melindungi."; }
+if(kata=="menipu"){ arti="Membuat orang lain percaya pada sesuatu yang tidak benar."; }
+if(kata=="tertipu"){ arti="Terkena tipu atau dibohongi."; }
+if(kata=="mengutuk"){ arti="Mengucapkan kata yang berisi doa buruk atau kemarahan."; }
+if(kata=="letusan"){ arti="Peristiwa gunung berapi mengeluarkan lava, abu, dan batu."; }
+
 document.getElementById("arti").innerText = arti;
 
 document.getElementById("popup").style.display="block";
@@ -146,6 +201,55 @@ function tutup(){
 document.getElementById("popup").style.display="none";
 document.getElementById("overlay").style.display="none";
 }
+
+let totalScore = 0;
+
+function cekGame(jawaban){
+const hasil = document.getElementById("gameHasil");
+
+if(jawaban === "benar"){
+hasil.innerHTML = "🎉 Benar!";
+hasil.style.color = "green";
+totalScore += 1;
+}else{
+hasil.innerHTML = "❌ Coba lagi!";
+hasil.style.color = "red";
+}
+}
+
+
+function cekQuiz(){
+  let score = 0;
+  let q1 = document.querySelector('input[name="q1"]:checked');
+  let q2 = document.querySelector('input[name="q2"]:checked');
+  let q3 = document.querySelector('input[name="q3"]:checked');
+
+  if(!q1 || !q2 || !q3){
+    document.getElementById("hasilQuiz").innerHTML =
+    "⚠️ Silakan jawab semua pertanyaan terlebih dahulu.";
+    return;
+  }
+
+  score += parseInt(q1.value);
+  score += parseInt(q2.value);
+  score += parseInt(q3.value);
+
+  let hasil = document.getElementById("hasilQuiz");
+
+  if(score == 3){
+    hasil.innerHTML = "🏆 Skor kamu: 3/3<br>Hebat! Kamu memahami cerita dengan sangat baik.";
+  }
+  else if(score == 2){
+    hasil.innerHTML = "👍 Skor kamu: 2/3<br>Bagus! Kamu hampir benar semua.";
+  }
+  else if(score == 1){
+    hasil.innerHTML = "🙂 Skor kamu: 1/3<br>Coba baca lagi ceritanya.";
+  }
+  else{
+    hasil.innerHTML = "📖 Skor kamu: 0/3<br>Yuk baca ceritanya lagi.";
+  }
+}
+
 
 </script>
 

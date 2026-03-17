@@ -91,6 +91,16 @@ Jawa Timur yang kita kenal hingga sekarang.
 
 </div>
 
+<div class="game">
+
+<h3>🎮 Game: Tebak Tokoh</h3>
+<p>Hewan apa yang bertarung dalam legenda Surabaya?</p>
+<button onclick="cekGame('benar')">Hiu dan Buaya</button>
+<button onclick="cekGame('salah')">Harimau dan Singa</button>
+
+<p id="gameHasil"></p>
+</div>
+
 
 <a href="../index.html" class="back-link">← Kembali ke Beranda</a>
 
@@ -136,6 +146,22 @@ function tutup(){
 document.getElementById("popup").style.display="none";
 document.getElementById("overlay").style.display="none";
 }
+
+function cekGame(jawaban){
+const hasil = document.getElementById("gameHasil");
+
+if(jawaban === "benar"){
+hasil.innerHTML = "🎉 Benar!";
+hasil.style.color = "green";
+totalScore += 1;
+}else{
+hasil.innerHTML = "❌ Coba lagi!";
+hasil.style.color = "red";
+}
+}
+
+
+
 
 </script>
 

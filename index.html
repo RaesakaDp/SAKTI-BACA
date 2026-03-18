@@ -17,6 +17,24 @@
 </head>
 
 <body>
+<div id="splash">
+
+  <div class="splash-content">
+    <h1 class="logo">SAKTI BACA</h1>
+    <p class="tagline">Literasi Digital & Budaya</p>
+    
+
+    <div class="progress-container">
+      <div class="progress-bar" id="progressBar"></div>
+    </div>
+
+    <p class="loading-text">
+      Memuat... <span id="progressText">0%</span>
+    </p>
+    <p class="tagline">Della Novianty</p>
+  </div>
+
+</div>
 
 <nav class="navbar">
 
@@ -379,6 +397,55 @@ distance:'40px',
 duration:800,
 origin:'left'
 });
+
+
+let progress = 0;
+let progressBar = document.getElementById("progressBar");
+let progressText = document.getElementById("progressText");
+
+let interval = setInterval(() => {
+
+progress += Math.random() * 10; // biar smooth random
+
+if(progress >= 100){
+progress = 100;
+clearInterval(interval);
+
+setTimeout(() => {
+document.getElementById("splash").classList.add("hide");
+}, 500);
+}
+
+progressBar.style.width = progress + "%";
+progressText.innerText = Math.floor(progress) + "%";
+
+}, 200);
+
+// saat klik link → fade keluar
+document.querySelectorAll("a").forEach(link => {
+
+link.addEventListener("click", function(e){
+
+// skip kalau link luar / anchor
+if(this.target === "_blank" || this.href.includes("#")) return;
+
+e.preventDefault();
+
+document.body.classList.add("fade-out");
+
+setTimeout(()=>{
+window.location = this.href;
+}, 400);
+
+});
+
+});
+
+// saat halaman load → fade masuk
+window.onload = () => {
+document.body.classList.remove("fade-out");
+};
+
 
 </script>
 
